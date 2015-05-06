@@ -1,5 +1,5 @@
-## espaisonal map: prado-2015
-### medialab prado workshop on mapping
+## prado-2015
+#### medialab prado workshop on mapping
 
 ### CONTENTS
 This repo contains "code checkpoints" for a workshop at the **MediaLab Prado** outlined [here]().
