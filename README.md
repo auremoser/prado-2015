@@ -22,7 +22,7 @@ All images used in the tutorial are available in the `img` directory.
 
 Data used for the map (except the Barcelona building footprints in the CartoDB Data Library) is in the `data` directory.
 
-<img src="https://raw.githubusercontent.com/auremoser/prado-2015/master/img/espaisional.jpg" align="center" alt="Espaisional Map" margin="5px" height="400" width="700">
+<img src="https://raw.githubusercontent.com/auremoser/prado-2015/master/img/espaisional.jpg" align="center" alt="Espaisional Map" margin="5px" height="375" width="700">
 
 ### LINKS
 Here are some helpful references for moving forward or troubleshooting what you find here:
