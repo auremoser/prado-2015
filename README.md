@@ -10,7 +10,7 @@ The **Espaisonal Map** produced here presumes limited knowledge in JS and SQL. M
 
 espaisional = espai (space) + pais (country) + personal (personal) | a map of personal space in Barcelona, Catalunya.
 
-<img src="https://raw.githubusercontent.com/auremoser/prado-2015/master/img/flag.jpg" align="center" alt="spain/catalan flag" margin="5px" height="450" width="700">
+<img src="https://raw.githubusercontent.com/auremoser/prado-2015/master/img/flag.png" align="center" alt="spain/catalan flag" margin="5px" height="450" width="700">
 
 * **VisJson** - ckpt-1-visjson
 * **CreateVis Method** - ckpt-2-createVis
