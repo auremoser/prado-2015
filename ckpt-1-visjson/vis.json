@@ -1,0 +1,403 @@
+{
+  "id": "f2735936-f268-11e4-8858-0e853d047bba",
+  "version": "0.1.0",
+  "title": "MLP_Barca",
+  "likes": 0,
+  "description": null,
+  "scrollwheel": false,
+  "legends": true,
+  "url": null,
+  "map_provider": "leaflet",
+  "bounds": [
+    [
+      41.37165592008984,
+      2.0728111267089844
+    ],
+    [
+      41.452376690611544,
+      2.3038673400878906
+    ]
+  ],
+  "center": "[41.412061028490854, 2.1883392333984375]",
+  "zoom": 13,
+  "updated_at": "2015-05-06T15:10:05+00:00",
+  "layers": [
+    {
+      "options": {
+        "visible": true,
+        "type": "Tiled",
+        "id": "44e4c8b4-5aa9-4355-84cc-2eadee156286",
+        "order": 0,
+        "name": "Dark matter",
+        "className": "httpscartodbbasemapssglobalsslfastlynetdark_allzxypng",
+        "base_type": "dark_matter_rainbow",
+        "urlTemplate": "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+        "read_only": true,
+        "minZoom": "0",
+        "maxZoom": "18",
+        "attribution": "\u00a9 <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors \u00a9 <a href=\"http://cartodb.com/attributions#basemaps\">CartoDB</a>",
+        "subdomains": "abcd",
+        "category": "CartoDB",
+        "parent_id": null
+      },
+      "infowindow": null,
+      "tooltip": null,
+      "id": "44e4c8b4-5aa9-4355-84cc-2eadee156286",
+      "order": 0,
+      "parent_id": null,
+      "children": [
+
+      ],
+      "type": "tiled"
+    },
+    {
+      "type": "namedmap",
+      "order": 1,
+      "options": {
+        "type": "namedmap",
+        "user_name": "aureliamoser",
+        "maps_api_template": "https://{user}.cartodb.com:443",
+        "sql_api_template": "https://{user}.cartodb.com:443",
+        "tiler_protocol": "http",
+        "tiler_domain": "cartodb.com",
+        "tiler_port": "80",
+        "cdn_url": {
+          "http": "api.cartocdn.com",
+          "https": "cartocdn.global.ssl.fastly.net"
+        },
+        "dynamic_cdn": false,
+        "named_map": {
+          "name": "tpl_f2735936_f268_11e4_8858_0e853d047bba",
+          "stat_tag": "f2735936-f268-11e4-8858-0e853d047bba",
+          "params": {
+            "layer0": 1,
+            "layer1": 1,
+            "layer2": 1
+          },
+          "layers": [
+            {
+              "layer_name": "parcelas_islas_barcelona",
+              "interactivity": "cartodb_id,area,area_bin,bcn_ille_1,bcn_ille_2,bcn_ille_3,bcn_ille_4,bcn_ille_5,bcn_ille_6,bcn_ille_7,bcn_ille_8,bcn_ille_9,bcn_illes_,c_aeb,c_illa,c_illaine,c_parcel,cbarri,cseccens,district,hab_per_ar,habitants,n_altres,n_locals,n_parceles,n_parquing,nbarri,ndistric,nhabitatge,perimetr,perimetre,person_area,ref_cadast,solar,sup_constr,sup_locals,supserveis",
+              "visible": true,
+              "tooltip": {
+                "fields": [
+                  {
+                    "position": 1,
+                    "name": "area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "area_bin",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_1",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_2",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_3",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_4",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_5",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_6",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_7",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_ille_8",
+                    "title": true
+                  },
+                  {
+                    "position": 10,
+                    "name": "bcn_ille_9",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "bcn_illes_",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "c_aeb",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "c_illa",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "c_illaine",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "c_parcel",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "cbarri",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "cseccens",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "district",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "hab_per_ar",
+                    "title": true
+                  },
+                  {
+                    "position": 20,
+                    "name": "habitants",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "n_altres",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "n_locals",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "n_parceles",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "n_parquing",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "nbarri",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "ndistric",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "nhabitatge",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "perimetr",
+                    "title": true
+                  },
+                  {
+                    "position": 29,
+                    "name": "perimetre",
+                    "title": true
+                  },
+                  {
+                    "position": 35,
+                    "name": "person_area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "ref_cadast",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "solar",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "sup_constr",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "sup_locals",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "supserveis",
+                    "title": true
+                  }
+                ],
+                "template_name": "",
+                "template": "<div class=\"cartodb-tooltip-content-wrapper dark\">\n  <div class=\"cartodb-tooltip-content\">\n    <h4>area by person</h4>\n    <p>{{person_area}}</p>\n    <h4>neighboorhood</h4>\n    <p>{{bcn_ille_9}}</p>\n    <h4>habitants</h4>\n    <p>{{habitants}}</p>\n    <h4>perimetre</h4>\n    <p>{{perimetre}}</p>\n  </div>\n</div>",
+                "alternative_names": {
+
+                },
+                "maxHeight": 180
+              },
+              "legend": {
+                "type": "choropleth",
+                "show_title": true,
+                "title": "Area Per Habitant (sq/m)",
+                "template": "<div class='cartodb-legend choropleth'>\t\n<div class=\"legend-title\">Area Per Habitant (sq/m)</div>\n<ul>\n\t<li class=\"min\">\n\t\t191\n\t</li>\n\t<li class=\"max\">\n\t\t145920\n\t</li>\n\t<li class=\"graph count_378\">\n\t<div class=\"colors\">\n\t<div class=\"quartile\" style=\"background-color:#FFFFB2\"></div>\n\t<div class=\"quartile\" style=\"background-color:#FECC5C\"></div>\n\t<div class=\"quartile\" style=\"background-color:#FD8D3C\"></div>\n\t<div class=\"quartile\" style=\"background-color:#F03B20\"></div>\n\t<div class=\"quartile\" style=\"background-color:#BD0026\"></div>\n</ul>\n  </div>\n<div class=\"cartodb-legend category\">\t\n\t<ul>\n\t\t<li style=\"margin-top: 10px\">\n\t\t\t<div class=\"bullet\" style=\"background: #5CA2D1\"></div> No habitants in these areas\n\t\t</li>\n  </ul>\n</div>",
+                "items": [
+                  {
+                    "name": "Left label",
+                    "visible": true,
+                    "value": "191",
+                    "type": "text",
+                    "custom_value": true
+                  },
+                  {
+                    "name": "Right label",
+                    "visible": true,
+                    "value": "145920",
+                    "type": "text",
+                    "custom_value": true
+                  },
+                  {
+                    "name": "Color",
+                    "visible": true,
+                    "value": "#FFFFB2",
+                    "type": "color"
+                  },
+                  {
+                    "name": "Color",
+                    "visible": true,
+                    "value": "#FECC5C",
+                    "type": "color"
+                  },
+                  {
+                    "name": "Color",
+                    "visible": true,
+                    "value": "#FD8D3C",
+                    "type": "color"
+                  },
+                  {
+                    "name": "Color",
+                    "visible": true,
+                    "value": "#F03B20",
+                    "type": "color"
+                  },
+                  {
+                    "name": "Color",
+                    "visible": true,
+                    "value": "#BD0026",
+                    "type": "color"
+                  },
+                  {
+                    "name": "Color",
+                    "visible": true,
+                    "value": "#5CA2D1",
+                    "type": "color"
+                  }
+                ]
+              }
+            },
+            {
+              "layer_name": "estaciones-line",
+              "interactivity": "cartodb_id",
+              "visible": true
+            },
+            {
+              "layer_name": "estaciones-pt",
+              "interactivity": "cartodb_id",
+              "visible": true
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "type": "logo",
+      "order": 9,
+      "options": {
+        "display": true,
+        "x": 10,
+        "y": 40
+      },
+      "template": ""
+    },
+    {
+      "type": "loader",
+      "order": 8,
+      "options": {
+        "display": true,
+        "x": 20,
+        "y": 150
+      },
+      "template": "<div class=\"loader\" original-title=\"\"></div>"
+    },
+    {
+      "type": "zoom",
+      "order": 6,
+      "options": {
+        "display": true,
+        "x": 20,
+        "y": 20
+      },
+      "template": "<a href=\"#zoom_in\" class=\"zoom_in\">+</a> <a href=\"#zoom_out\" class=\"zoom_out\">-</a>"
+    },
+    {
+      "type": "search",
+      "order": 3,
+      "options": {
+        "display": true,
+        "x": 60,
+        "y": 20
+      },
+      "template": ""
+    },
+    {
+      "type": "share",
+      "order": 2,
+      "options": {
+        "display": true,
+        "x": 20,
+        "y": 20
+      },
+      "template": ""
+    }
+  ],
+  "prev": null,
+  "next": null,
+  "transition_options": {
+    "time": 0
+  }
+}
