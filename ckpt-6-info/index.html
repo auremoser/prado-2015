@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Template | CartoDB</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+
+    <style type="text/css">
+          html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #cartocss {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+          }
+          #sql {
+            position: absolute;
+            right: 292px;
+            top: 20px;
+          }
+          /*ADD LEGEND ID*/
+          #legend {
+            position: absolute;
+            left: 40px;
+            top: 0;
+          }
+          /*Button Styles*/
+          .layer_selector {
+            background: rgba(255,255,255,0.9);
+            border: 1px solid #999;
+            border-radius: 5px;
+            font-family: 'Unica One', sans-serif;
+            font-size: 13px;
+            padding: 0;
+            text-align: center;
+            width: 250px;
+          }
+          .layer_selector > p {
+            border-bottom: 1px solid #999;
+            padding: 5px 10px;
+            text-transform: uppercase;
+          }
+          .layer_selector ul {
+            padding: 0; margin: 0;
+            list-style-type: none;
+          }
+          .layer_selector li {
+            color: #444;
+            cursor: pointer;
+            padding: 10px 20px;
+          }
+          .layer_selector li:not(:last-child) {
+            border-bottom: 1px solid #999;
+          }
+          .layer_selector li:hover {
+            background-color: #98c4e2;
+            cursor: pointer;
+          }
+          .layer_selector li.selected {
+            background-color: #5CA2D1;
+          }
+          /*LEGEND STYLES*/
+          .legend {
+            background: rgba(255,255,255,0.9);
+            border: 1px solid #999;
+            border-radius: 5px;
+            font-family: 'Unica One', sans-serif;
+            font-size: 13px;
+            margin: 15px;
+            padding: 5px;
+            text-align: center;
+            width: 290px;
+            z-index: 100;
+          }
+          .legend .legend-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: 'Unica One', sans-serif;
+            text-transform: uppercase;
+            }
+          .legend .legend-scale ul {
+            font-family: 'Unica One', sans-serif;
+            margin: 0;
+            padding: 0;
+            float: left;
+            list-style: none;
+            }
+          .legend .legend-scale ul li {
+            display: block;
+            float: left;
+            width: 45px;
+            margin-bottom: 6px;
+            text-align: right;
+            font-size: 80%;
+            list-style: none;
+            }
+          .legend ul.legend-labels li span {
+            display: block;
+            float: left;
+            height: 15px;
+            width: 45px;
+            margin: 8px;
+            }
+          .legend .legend-source {
+            font-family: 'Unica One', sans-serif;
+            font-size: 80%;
+            color: #999;
+            clear: both;
+            padding: 2px;
+            text-transform: uppercase;
+            }
+          .legend a {
+            color: #777;
+            }
+    </style>
+
+    <!-- SQL TEMPLATE -->
+    <script type='sql/text' id='sql'>
+      SELECT
+        *,
+        CASE WHEN
+          habitants > 0
+        THEN
+          ceil(ST_Area(the_geom::geography)/habitants)
+        ELSE
+          null
+        END
+          person_area
+      FROM parcelas_islas_barcelona
+    </script>
+
+    <!-- SIMPLE VIS CSS -->
+    <style type='cartocss/text' id='simple'>
+      /** simple visualization */
+      #parcelas_islas_barcelona{
+        polygon-fill: #5CA2D1;
+        polygon-opacity: 0.7;
+        line-color: #FFF;
+        line-width: 0.25;
+        line-opacity: 1;
+      }
+    </style>
+
+    <!-- CHOROPLETH CSS -->
+    <style type='cartocss/text' id='choropleth'>
+    /** choropleth visualization */
+
+    #parcelas_islas_barcelona{
+      polygon-fill: #FFFFB2;
+      polygon-opacity: 0.8;
+      line-color: #FFF;
+      line-width: 0;
+      line-opacity: 1;
+    }
+    #parcelas_islas_barcelona [ person_area <= 145920] {
+       polygon-fill: #BD0026;
+    }
+    #parcelas_islas_barcelona [ person_area <= 3192] {
+       polygon-fill: #F03B20;
+    }
+    #parcelas_islas_barcelona [ person_area <= 1026] {
+       polygon-fill: #FD8D3C;
+    }
+    #parcelas_islas_barcelona [ person_area <= 461] {
+       polygon-fill: #FECC5C;
+    }
+    #parcelas_islas_barcelona [ person_area <= 191] {
+       polygon-fill: #FFFFB2;
+    }
+    #parcelas_islas_barcelona [ person_area = null] {
+       polygon-fill: #5CA2D1;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- ADD BUTTONS -->
+    <div id="cartocss" class="layer_selector">
+        <p>Layers</p>
+        <ul>
+            <li data="choropleth">Habitant Choropleth</li>
+            <li data="simple">Building Map (no habitants)</li>
+        </ul>
+    </div>
+    <!-- LEGENDS -->
+    <div id="legend" class='legend'>
+      <div class='legend-title'>Area Per Habitant (sq/m)</div>
+      <hr>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#FFFFB2;'></span> < 190</li>
+          <li><span style='background:#FECC5C;'></span></li>
+          <li><span style='background:#FD8D3C;'></span></li>
+          <li><span style='background:#F03B20;'></span></li>
+          <li><span style='background:#BD0026;'></span> < 14,500</li>
+          <li><span style='background:#5CA2D1;'></span> None</li>
+        </ul>
+      </div>
+      <div class='legend-source'>Source: <a href="http://w20.bcn.cat/cartobcn/">CartoBCN</a></div>
+    </div>
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+
+    <!-- place your code betwee the script tags below -->
+    <script src="main.js"></script>
+  </body>
+</html>

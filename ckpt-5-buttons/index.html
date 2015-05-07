@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Template | CartoDB</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+
+    <style type="text/css">
+          html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #cartocss {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+          }
+          #sql {
+            position: absolute;
+            right: 292px;
+            top: 20px;
+          }
+          /*BUTTON STYLES*/
+          .layer_selector {
+            background: rgba(255,255,255,0.9);
+            border: 1px solid #999;
+            border-radius: 5px;
+            font-family: 'Unica One', sans-serif;
+            font-size: 13px;
+            padding: 0;
+            text-align: center;
+            width: 250px;
+          }
+          .layer_selector > p {
+            border-bottom: 1px solid #999;
+            padding: 5px 10px;
+            text-transform: uppercase;
+          }
+          .layer_selector ul {
+            padding: 0; margin: 0;
+            list-style-type: none;
+          }
+          .layer_selector li {
+            color: #444;
+            cursor: pointer;
+            padding: 10px 20px;
+          }
+          .layer_selector li:not(:last-child) {
+            border-bottom: 1px solid #999;
+          }
+          .layer_selector li:hover {
+            background-color: #98c4e2;
+            cursor: pointer;
+          }
+          .layer_selector li.selected {
+            background-color: #5CA2D1;
+          }
+    </style>
+
+    <!-- SQL TEMPLATE -->
+    <script type='sql/text' id='sql'>
+      SELECT
+        *,
+        CASE WHEN
+          habitants > 0
+        THEN
+          ceil(ST_Area(the_geom::geography)/habitants)
+        ELSE
+          null
+        END
+          person_area
+      FROM parcelas_islas_barcelona
+    </script>
+
+    <!-- SIMPLE VIS CSS -->
+    <style type='cartocss/text' id='simple'>
+      /** simple visualization */
+      #parcelas_islas_barcelona{
+        polygon-fill: #5CA2D1;
+        polygon-opacity: 0.7;
+        line-color: #FFF;
+        line-width: 0.25;
+        line-opacity: 1;
+      }
+    </style>
+
+    <!-- CHOROPLETH CSS -->
+    <style type='cartocss/text' id='choropleth'>
+    /** choropleth visualization */
+
+    #parcelas_islas_barcelona{
+      polygon-fill: #FFFFB2;
+      polygon-opacity: 0.8;
+      line-color: #FFF;
+      line-width: 0;
+      line-opacity: 1;
+    }
+    #parcelas_islas_barcelona [ person_area <= 145920] {
+       polygon-fill: #BD0026;
+    }
+    #parcelas_islas_barcelona [ person_area <= 3192] {
+       polygon-fill: #F03B20;
+    }
+    #parcelas_islas_barcelona [ person_area <= 1026] {
+       polygon-fill: #FD8D3C;
+    }
+    #parcelas_islas_barcelona [ person_area <= 461] {
+       polygon-fill: #FECC5C;
+    }
+    #parcelas_islas_barcelona [ person_area <= 191] {
+       polygon-fill: #FFFFB2;
+    }
+    #parcelas_islas_barcelona [ person_area = null] {
+       polygon-fill: #5CA2D1;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- ADD BUTTONS -->
+    <div id="cartocss" class="layer_selector">
+        <p>Layers</p>
+        <ul>
+            <li data="choropleth">Habitant Choropleth</li>
+            <li data="simple">Building Map (no habitants)</li>
+        </ul>
+    </div>
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+
+    <!-- place your code betwee the script tags below -->
+    <script src="main.js"></script>
+  </body>
+</html>

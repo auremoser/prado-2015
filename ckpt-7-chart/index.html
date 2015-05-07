@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <title>BCN Habitants x Parcela (SQ/M) </title>
+	 <script src="http://www.chartjs.org/assets/Chart.js"></script>
+	 <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+        <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+		<script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script>
+		<style>
+		  canvas {
+        height: 500px;
+        margin: 5px;
+        width: 900px;
+			}
+		</style>
+	</head>
+	<body>
+    <canvas id="canvas"></canvas>
+    <script>
+
+      var sql = cartodb.SQL({ user: 'aureliamoser' });
+      // you could use person_area in your "total" but the results would be too divergent for a pretty chart
+      sql.execute("SELECT *, CASE WHEN habitants > 0 THEN ceil(ST_Area(the_geom::geography)/habitants) ELSE null END person_area FROM parcelas_islas_barcelona LIMIT 25")
+          .done(function(data) {
+        	 console.log(data);
+      var total = [];
+      var labels  = [];
+
+      for (i in data.rows) {
+        // change these variables to change graph rendering
+        total.push(data.rows[i].nhabitatge);
+        labels.push(data.rows[i].bcn_ille_9);
+      }
+        console.log(data);
+        var lineChartData = {
+    			labels : labels,
+    		  datasets : [
+    				{
+                barDatasetSpacing : 0,
+                barValueSpacing : 0,
+                fillColor : "#F03B20",
+    						strokeColor : "#FD8D3C",
+                tooltipFillColor: "rgba(0,0,0,0.8)",
+    						pointColor : "#FECC5C",
+    						pointStrokeColor : "#fff",
+    						data : total
+    				}
+    			]
+			   }
+      var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(lineChartData);
+	   });
+	 </script>
+	</body>
+</html>
