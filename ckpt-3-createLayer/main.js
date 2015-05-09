@@ -10,8 +10,6 @@ window.onload = function() {
 
        // instantiate map object from Leaflet
        var mapObj = new L.Map(map, {
-
-     // <-- Replace map_id with your #id for rendering
            center: [41.3833, 2.1833], // Barcelona, Spain
            zoom: 13 // zoom projection to adjust starting point zoom
        });
