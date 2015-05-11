@@ -4,7 +4,7 @@
 ### CONTENTS
 This repo contains "code checkpoints" for a workshop at the **MediaLab Prado** outlined [here](https://gist.github.com/auremoser/1b5b9cc5c7452c7af1ab).
 
-There are reference anchors throughout the outline for when to consult these checkpoints, in case you get lost or want to move at an alternate pace.
+There are reference anchors throughout the outline for when to consult these checkpoints, in case you get lost or want to move at an alternate pace. The final project is available in a block [here](http://bl.ocks.org/auremoser/7990e895458123a20f68).
 
 The map produced here presumes limited knowledge in JS and SQL. Most of it was completed in the CartoDB Editor (GUI), the results were exported here it is broken into sections (ckpt-1 through ckpt-5).
 
