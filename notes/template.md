@@ -1,33 +1,32 @@
-## Template for MediaLab Project Workshop
+## Template for Workshop
 
-### Goals
-
-> List some goals for your project.
-
-### Project Title
+### Title / Título
 
 ### Logo
 
-### Project Description
+### Description / Descripción
 
-### Project Details
+#### Representative Images / Imagen representativa
 
-#### Contact Info
+#### Herramientas y materiales empleados (soft, hw, repositiorios, etc…)
+
+### Contact Info
+
+#### Promotor
+
+#### Contact Info / Colaboradores con descripción de roles de cada uno (muy breve)
 
 > Who was on your team?
 
 * name, github username, email address
 
 
-#### Project Structure
+### Links / Enlaces:
 
-> How did you develop your project, how are your notes structured?
+> A repositorios, blogs, etc, etc
+> Wiki medialab
+> Páginas personales
+> Referencias
+> Manuales
 
-#### Further Tasks
-
-> What are your future goals for the project?
-
-#### Resources/Links
-
-> Are there any support materials for your project online?
 
