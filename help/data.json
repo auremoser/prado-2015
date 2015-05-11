@@ -1,0 +1,207 @@
+[
+    {
+        "title": "A Capela (A Capela)",
+        "place": "A Capela",
+        "number": 3
+    },
+    {
+        "title": "Areas (Ponteareas)",
+        "place": "Areas",
+        "number": 5
+    },
+    {
+        "title": "As Pontes de García Rodríguez (As Pontes de García Rodríguez)",
+        "place": "As Pontes de García Rodríguez",
+        "number": 4
+    },
+    {
+        "title": "Baiona (Baiona)",
+        "place": "Baiona",
+        "number": 9
+    },
+    {
+        "title": "Cornazo (Vilagarcía de Arousa)",
+        "place": "Cornazo",
+        "number": 2
+    },
+    {
+        "title": "Fornelos de Cova (Viana do Bolo)",
+        "place": "Fornelos de Cova",
+        "number": 1
+    },
+    {
+        "title": "Fosa da praia de Frouxeira (Valdoviño)",
+        "place": "Praia da Frouxeira",
+        "number": 4
+    },
+    {
+        "title": "Fosa de Campobecerros (Castrelo do Val)",
+        "place": "Campobecerros",
+        "number": 2
+    },
+    {
+        "title": "Fosa de Cereixido (Quiroga)",
+        "place": "Cereixido",
+        "number": 6
+    },
+    {
+        "title": "Fosa de Chao-Candedo (Ourol)",
+        "place": "Chao-Candedo",
+        "number": 3
+    },
+    {
+        "title": "Fosa de Grandal (Vilarmaior)",
+        "place": "Grandal",
+        "number": 5
+    },
+    {
+        "title": "Fosa de Mos (Mos)",
+        "place": "Mos",
+        "number": 22
+    },
+    {
+        "title": "Fosa de O Acevo (A Fonsagrada)",
+        "place": "O Acevo (3 fosas)",
+        "number": 13
+    },
+    {
+        "title": "Fosa de Ourense",
+        "place": "Ourense",
+        "number": 1
+    },
+    {
+        "title": "Fosa de Poula do Martiño (A Gudiña)",
+        "place": "Poula do Martiño-Pentes",
+        "number": 2
+    },
+    {
+        "title": "Fosa de Remeite (Ribas de Sil)",
+        "place": "Remeite (dubidosa)",
+        "number": 1
+    },
+    {
+        "title": "Fosa de San Andrés de Xeve (Pontevedra)",
+        "place": "San Andrés de Xeve",
+        "number": 6
+    },
+    {
+        "title": "Fosa de San Mamede de Río (Portomarín)",
+        "place": "San Mamede do Río",
+        "number": 1
+    },
+    {
+        "title": "Fosa de San Salvador de Budiño (O Porriño)",
+        "place": "San Salvador de Budiño",
+        "number": 4
+    },
+    {
+        "title": "Fosa de Seoane do Caurel (Folgoso do Courel)",
+        "place": "Seoane do Courel",
+        "number": 1
+    },
+    {
+        "title": "Fosa de Soulecín (O Barco de Valdeorras)",
+        "place": "Soulecín",
+        "number": 2
+    },
+    {
+        "title": "Fosa de Torrentes-Cortapezas (Portomarín)",
+        "place": "Torrentes-Cortapezas",
+        "number": 2
+    },
+    {
+        "title": "Fosa do Amenal (O Pino)",
+        "place": "Amenal (1 fosa)",
+        "number": 2
+    },
+    {
+        "title": "Fosa do Amenal (O Pino)",
+        "place": "Amenal (1 fosa)",
+        "number": 3
+    },
+    {
+        "title": "Fosa do Curro (Barro)",
+        "place": "Curro",
+        "number": 2
+    },
+    {
+        "title": "Fosa do Lombo do Barco (Castrelo do Val)",
+        "place": "Lombo do Barco-Campobecerros",
+        "number": 1
+    },
+    {
+        "title": "Fosa en O Incio (O Incio)",
+        "place": "Concello: O Incio.  O Incio",
+        "number": 1
+    },
+    {
+        "title": "Fosas de Filgueiras (Crecente)",
+        "place": "Filgueiras (dos fosas)",
+        "number": 2
+    },
+    {
+        "title": "Fosas de Filgueiras (Crecente)",
+        "place": "Filgueira: unha fosa",
+        "number": 1
+    },
+    {
+        "title": "Galez (Entrimo)",
+        "place": "Galez",
+        "number": 3
+    },
+    {
+        "title": "Grandal (Vilarmaior)",
+        "place": "Grandal",
+        "number": 5
+    },
+    {
+        "title": "Mondariz (Mondariz)",
+        "place": "Mondariz",
+        "number": 4
+    },
+    {
+        "title": "Mondoñedo (Mondoñedo)",
+        "place": "Mondoñedo (1 fosa individual)",
+        "number": 1
+    },
+    {
+        "title": "Mondoñedo (Mondoñedo)",
+        "place": "Mondoñedo (4 fosas individuais)",
+        "number": 4
+    },
+    {
+        "title": "Monte A Medela (O Vicedo)",
+        "place": "Monte A Medela",
+        "number": 2
+    },
+    {
+        "title": "Ortoño (Ames)",
+        "place": "Ortoño",
+        "number": 6
+    },
+    {
+        "title": "San Pedro de Argomoso (Mondoñedo)",
+        "place": "San Pedro de Argomoso",
+        "number": 1
+    },
+    {
+        "title": "San Xián (O Rosal)",
+        "place": "San Xián (2 fosas)",
+        "number": 5
+    },
+    {
+        "title": "Sorga (A Bola)",
+        "place": "Sorga (exhumación parcial)",
+        "number": 1
+    },
+    {
+        "title": "Tenorio (Cotobade)",
+        "place": "Tenorio",
+        "number": 11
+    },
+    {
+        "title": "Xinzo (Ponteareas)",
+        "place": "Xinzo",
+        "number": 17
+    }
+]
