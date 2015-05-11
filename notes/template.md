@@ -6,6 +6,8 @@
 
 ### Project Title
 
+### Logo
+
 ### Project Description
 
 ### Project Details
